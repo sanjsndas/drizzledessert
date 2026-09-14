@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Contact Drizzle Dessert House — editorial enquiries, recipe questions, and collaborations.">
+  <title>Drizzle Dessert House · Contact</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4; /* vanilla cream */
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A; /* deep cocoa */
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C; /* burnt caramel */
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- CONTACT PAGE SPECIFIC ---------- */
+    .contact-hero {
+      padding: 3.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .contact-hero h1 {
+      font-size: clamp(2.6rem, 8vw, 4.4rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-hero p {
+      max-width: 620px;
+      margin: 0 auto 1rem;
+      font-size: 1.25rem;
+      color: #4F3E35;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 3rem;
+      padding: 2rem 0 4rem;
+      align-items: start;
+    }
+
+    .contact-form-wrapper {
+      background: var(--sugar);
+      border-radius: 32px 8px 32px 8px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .contact-form-wrapper h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-wrapper > p {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #5F4D40;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      background: #FDF9F4;
+      border: 1px solid #EADDD0;
+      border-radius: 20px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      color: var(--cocoa);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--caramel);
+      box-shadow: 0 0 0 4px rgba(180, 90, 60, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .submit-btn {
+      background: var(--cocoa);
+      color: white;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease;
+      width: 100%;
+      letter-spacing: 0.02em;
+    }
+
+    .submit-btn:hover {
+      background: var(--caramel);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* sidebar */
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-card {
+      background: #F6EDE4;
+      border-radius: 28px 8px 28px 8px;
+      padding: 2rem;
+      border: 1px solid #EADDD0;
+    }
+
+    .sidebar-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .sidebar-card h3 span {
+      background: var(--caramel);
+      color: white;
+      font-size: 0.65rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-detail:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      background: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-detail p {
+      margin-bottom: 0.1rem;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .contact-detail span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .studio-hours {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      border-bottom: 1px dashed #EADDD0;
+      padding-bottom: 0.6rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hours-day {
+      font-weight: 500;
+    }
+
+    .hours-time {
+      color: #5F4D40;
+    }
+
+    .editorial-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 60px;
+      width: fit-content;
+      margin-top: 0.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .editorial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--caramel);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .editorial-info p {
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .editorial-info span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .contact-form-wrapper {
+        padding: 2rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .contact-hero h1 {
+        font-size: 2.2rem;
+      }
+      .contact-form-wrapper {
+        padding: 1.5rem;
+      }
+      .sidebar-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== CONTACT MAIN ========== -->
+  <main>
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="contact-hero fade-up">
+        <h1>Let’s talk dessert.</h1>
+        <p>Questions about a recipe, editorial enquiries, or just want to share a bake? We read every note — and we answer with the same care we give a caramel.</p>
+      </section>
+
+      <!-- GRID: FORM + SIDEBAR -->
+      <div class="contact-grid">
+        <!-- FORM -->
+        <div class="contact-form-wrapper fade-up delay-1">
+          <h2>Send a note</h2>
+          <p>We typically reply within two working days.</p>
+
+          <form id="contactForm" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Julia Child" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="recipe">Recipe question</option>
+                <option value="editorial">Editorial / pitch</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Tell us what’s on your mind — the more detail, the better." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send message →</button>
+            <p class="contact-note">We’ll never share your details. Ever.</p>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="contact-sidebar fade-up delay-2">
+          <!-- contact details -->
+          <div class="sidebar-card">
+            <h3>Studio <span>direct</span></h3>
+            <div class="contact-detail">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <p>hello@drizzledessert.house</p>
+                <span>General & editorial</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">📞</div>
+              <div>
+                <p>+1 (555) 742-9386</p>
+                <span>Mon–Fri, 10am–4pm (EST)</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">📍</div>
+              <div>
+                <p>14 Butter Lane, Studio 3</p>
+                <span>Brooklyn, NY 11201</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- hours -->
+          <div class="sidebar-card">
+            <h3>Kitchen hours <span>EST</span></h3>
+            <div class="studio-hours">
+              <div class="hours-row">
+                <span class="hours-day">Monday – Thursday</span>
+                <span class="hours-time">9:00 – 17:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Friday</span>
+                <span class="hours-time">9:00 – 15:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Saturday</span>
+                <span class="hours-time">10:00 – 14:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sunday</span>
+                <span class="hours-time">Closed (baking for fun)</span>
+              </div>
+            </div>
+            <p style="font-size:0.85rem; color:var(--muted); margin-top:1.25rem; margin-bottom:0;">
+              We’re a small team — if you’re dropping by, please email first.
+            </p>
+          </div>
+
+          <!-- editorial contact -->
+          <div class="sidebar-card">
+            <h3>Editorial <span>team</span></h3>
+            <div class="editorial-chip">
+              <div class="editorial-avatar">MR</div>
+              <div class="editorial-info">
+                <p>Maya Rivera</p>
+                <span>Founding editor · pastry & chocolate</span>
+              </div>
+            </div>
+            <div class="editorial-chip" style="margin-top:0.75rem;">
+              <div class="editorial-avatar">EV</div>
+              <div class="editorial-info">
+                <p>Elias Vance</p>
+                <span>Contributing editor · dough & fruit</span>
+              </div>
+            </div>
+            <p style="font-size:0.9rem; margin-top:1.25rem; margin-bottom:0;">
+              For pitches, please include a short outline and any relevant links.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="#">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPT (simple demo interactions) ========== -->
+  <script>
+    (function() {
+      // Mobile menu placeholder
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          alert('Mobile menu — in a full build, this would open a navigation drawer.');
+        });
+      }
+
+      // Prevent default on placeholder links
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+      });
+
+      // Contact form handler (demo)
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          // Simple feedback
+          const btn = form.querySelector('.submit-btn');
+          const originalText = btn.textContent;
+          btn.textContent = '✓ Message sent (demo)';
+          btn.style.background = '#4F7A5C';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+          }, 3000);
+        });
+      }
+
+      // Focus on the first input if URL hash is #contact-form (optional)
+      if (window.location.hash === '#contact-form') {
+        const nameInput = document.getElementById('name');
+        if (nameInput) nameInput.focus();
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Drizzle Dessert House — a premium authority publication for dessert makers. Long-form guides, tested recipes, and the craft behind every drizzle.">
+  <title>Drizzle Dessert House · The Craft of Dessert</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4; /* vanilla cream */
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A; /* deep cocoa */
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C; /* burnt caramel */
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- HOMEPAGE HERO (split editorial) ---------- */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--butter);
+      color: #7A3E2C;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.05;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--caramel);
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: #4F3E35;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--cocoa);
+      color: white;
+      font-weight: 500;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      transition: background 0.25s ease, transform 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-cta:hover {
+      background: var(--caramel);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      border-radius: 30% 70% 40% 60% / 40% 50% 50% 60%;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 1 / 1.1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ---------- CATEGORY RIBBON (unique horizontal explorer) ---------- */
+    .category-ribbon {
+      padding: 2.5rem 0 1rem;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      background: #F9F3EC;
+    }
+
+    .ribbon-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .ribbon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      align-items: center;
+    }
+
+    .ribbon-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--cocoa);
+      border-bottom: 1px dashed transparent;
+      transition: border-color 0.2s;
+    }
+
+    .ribbon-item:hover {
+      border-color: var(--caramel);
+    }
+
+    .ribbon-count {
+      background: var(--butter);
+      border-radius: 40px;
+      padding: 0.15rem 0.7rem;
+      font-size: 0.75rem;
+      color: #6B4D3A;
+    }
+
+    /* ---------- FEATURED ARTICLE (asymmetric) ---------- */
+    .featured-section {
+      padding: 4rem 0 3rem;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .featured-image {
+      border-radius: 20px 80px 20px 80px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      aspect-ratio: 4 / 3;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .featured-content {
+      max-width: 520px;
+    }
+
+    .featured-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 1rem;
+    }
+
+    .featured-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .featured-excerpt {
+      color: #5B4A40;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      font-weight: 600;
+      color: var(--cocoa);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.2rem;
+    }
+
+    .read-more:hover {
+      color: var(--caramel);
+      border-color: var(--caramel);
+    }
+
+    /* ---------- INFOGRAPHIC / PILLAR SECTION ---------- */
+    .pillar-section {
+      background: #F6EDE4;
+      padding: 3.5rem 0;
+      margin: 2rem 0;
+      border-radius: 40px 0 40px 0;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .pillar-text h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .pillar-text p {
+      font-size: 1.1rem;
+      color: #4F3E35;
+    }
+
+    .pillar-visual {
+      background: var(--cream);
+      border-radius: 30px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid #EADDD0;
+    }
+
+    .pillar-visual h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .pillar-visual h3 span {
+      background: var(--caramel);
+      color: white;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.8rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .pillar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid #EADDD0;
+      padding-bottom: 0.75rem;
+    }
+
+    .pillar-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pillar-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: var(--caramel);
+      line-height: 1;
+      min-width: 2.5rem;
+    }
+
+    /* ---------- ARTICLE GRID (asymmetric cards) ---------- */
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+      padding: 3rem 0 2rem;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.5rem;
+    }
+
+    .article-card:nth-child(2) {
+      margin-top: 2rem;
+    }
+
+    .article-card:nth-child(5) {
+      margin-top: -1rem;
+    }
+
+    .card-image {
+      border-radius: 24px 8px 24px 8px;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      margin-bottom: 1.2rem;
+      background: #EADDD0;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .article-card:hover .card-image img {
+      transform: scale(1.04);
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .card-excerpt {
+      font-size: 0.95rem;
+      color: #5B4A40;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .card-author {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--cocoa);
+    }
+
+    .card-readtime {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ---------- ABOUT SHORT + AUTHOR ---------- */
+    .about-short {
+      padding: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .author-chip {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--butter);
+      padding: 1rem 1.5rem;
+      border-radius: 60px;
+      width: fit-content;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--caramel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .author-info p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- ARTICLE PAGE (for single article view) ---------- */
+    .article-page {
+      display: none;
+      padding: 3rem 0;
+    }
+
+    .article-page.active {
+      display: block;
+    }
+
+    .homepage-view.hidden {
+      display: none;
+    }
+
+    .article-header {
+      max-width: 780px;
+      margin: 0 auto 2rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+      color: var(--cocoa);
+      text-decoration: underline;
+      text-decoration-color: #EADDD0;
+      text-underline-offset: 4px;
+    }
+
+    .article-title {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .article-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.5rem;
+    }
+
+    .article-feature-image {
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 30px 10px 30px 10px;
+      overflow: hidden;
+    }
+
+    .article-feature-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .article-body h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .article-body h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    .article-body ul li {
+      list-style: disc;
+    }
+
+    .article-body ol li {
+      list-style: decimal;
+    }
+
+    .article-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .article-table th {
+      text-align: left;
+      background: #F4E3D0;
+      padding: 0.9rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid #EADDD0;
+    }
+
+    .article-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid #EADDD0;
+    }
+
+    .article-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+      background: none;
+      border: 1px solid var(--border-light);
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .back-home:hover {
+      background: var(--cocoa);
+      color: white;
+      border-color: var(--cocoa);
+    }
+
+    /* ---------- UTILITY ---------- */
+    .divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 2rem 0;
+    }
+
+    .text-link {
+      color: var(--caramel);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .hero-split {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 2rem;
+      }
+      .featured-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .pillar-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .recent-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .hero-split {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 0;
+      }
+      .hero-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+      .recent-grid {
+        grid-template-columns: 1fr;
+      }
+      .article-card:nth-child(2),
+      .article-card:nth-child(5) {
+        margin-top: 0;
+      }
+      .about-short {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .ribbon-grid {
+        gap: 0.8rem 1.5rem;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .article-meta-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    /* focus */
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+          <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== HOMEPAGE VIEW ========== -->
+  <main id="homepageView" class="homepage-view">
+    <div class="container">
+
+      <!-- HERO SPLIT -->
+      <section class="hero-split">
+        <div class="hero-content fade-up">
+          <span class="hero-tag">Authority in dessert craft</span>
+          <h1 class="hero-title">Where sugar meets <em>intention</em>.</h1>
+          <p class="hero-description">
+            Drizzle Dessert House is a slow-reading publication for cooks who care about 
+            texture, balance, and the quiet poetry of a perfect finish. Tested recipes, 
+            deep technique, and the stories behind every layer.
+          </p>
+          <button class="hero-cta" data-article="salted-caramel">Start with our caramel guide →</button>
+        </div>
+        <div class="hero-image fade-up delay-1">
+          <img 
+            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&auto=format&fit=crop" 
+            alt="A marble counter dusted with flour and a wooden spoon resting beside a bowl of caramel"
+            loading="eager"
+          >
+        </div>
+      </section>
+
+      <!-- CATEGORY RIBBON -->
+      <section class="category-ribbon" aria-label="Explore by category">
+        <div class="ribbon-label">Browse the pantry</div>
+        <div class="ribbon-grid">
+          <a href="#" class="ribbon-item">Cakes & Layers <span class="ribbon-count">14</span></a>
+          <a href="#" class="ribbon-item">Caramels & Sauces <span class="ribbon-count">9</span></a>
+          <a href="#" class="ribbon-item">Frozen & Chilled <span class="ribbon-count">11</span></a>
+          <a href="#" class="ribbon-item">Pastry & Dough <span class="ribbon-count">8</span></a>
+          <a href="#" class="ribbon-item">Chocolate Work <span class="ribbon-count">12</span></a>
+          <a href="#" class="ribbon-item">Fruit Desserts <span class="ribbon-count">7</span></a>
+        </div>
+      </section>
+
+      <!-- FEATURED ARTICLE -->
+      <section class="featured-section">
+        <div class="featured-grid">
+          <div class="featured-image">
+            <img 
+              src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&auto=format&fit=crop" 
+              alt="Close-up of a caramel drizzle falling from a spoon onto a pear tart"
+              loading="lazy"
+            >
+          </div>
+          <div class="featured-content">
+            <div class="featured-label">Featured · Technique</div>
+            <h2 class="featured-title">The quiet science of a perfect caramel</h2>
+            <p class="featured-excerpt">
+              Why does sugar turn from crystal to amber to bitter in seconds? 
+              We break down the stages, the temperatures, and the small signals 
+              that separate a glossy sauce from a burnt tragedy.
+            </p>
+            <a href="#" class="read-more" data-article="salted-caramel">Read the guide <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFOGRAPHIC / PILLAR SECTION -->
+      <section class="pillar-section">
+        <div class="container pillar-grid">
+          <div class="pillar-text">
+            <h2>Know your sugar stages</h2>
+            <p>
+              Caramel is not a single moment — it’s a sequence. This quick-reference 
+              breaks down the visual and aromatic cues that tell you exactly where 
+              you are, from thread to hard crack.
+            </p>
+            <p style="font-size:0.95rem; color:#7C6B5E;">
+              A printable version lives in our <a href="#" style="text-decoration:underline;">Resources</a> section.
+            </p>
+          </div>
+          <div class="pillar-visual">
+            <h3>Caramel stages <span>visual guide</span></h3>
+            <div class="pillar-list">
+              <div class="pillar-item"><span class="pillar-number">1</span> <strong>Thread (110°C)</strong> — sugar syrup, thin and clear</div>
+              <div class="pillar-item"><span class="pillar-number">2</span> <strong>Soft ball (115°C)</strong> — fudge and fondant territory</div>
+              <div class="pillar-item"><span class="pillar-number">3</span> <strong>Firm ball (120°C)</strong> — caramels you can chew</div>
+              <div class="pillar-item"><span class="pillar-number">4</span> <strong>Hard crack (150°C)</strong> — brittle, spun sugar, lollipops</div>
+              <div class="pillar-item"><span class="pillar-number">5</span> <strong>Amber (170°C+)</strong> — deep caramel, almost bitter</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECENT / ASYMMETRIC ARTICLE GRID -->
+      <section aria-label="Recent articles">
+        <div class="recent-grid">
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop" 
+                alt="A slice of chocolate cake with ganache dripping down the side"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Chocolate</span> <span>12 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="chocolate-ganache">The glossy ganache: temperature, ratio, and shine</a></h3>
+            <p class="card-excerpt">Why your ganache splits — and the two-ingredient fix that never fails.</p>
+            <div class="card-footer">
+              <span class="card-author">Maya R.</span>
+              <span class="card-readtime">Mar 12</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop" 
+                alt="A rustic pear frangipane tart on parchment paper"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Pastry</span> <span>9 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="pear-tart">Frangipane, fruit, and the art of the rustic tart</a></h3>
+            <p class="card-excerpt">A forgiving dough, a foolproof filling, and the confidence to bake without a recipe.</p>
+            <div class="card-footer">
+              <span class="card-author">Elias V.</span>
+              <span class="card-readtime">Mar 8</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&auto=format&fit=crop" 
+                alt="A scoop of vanilla bean ice cream with visible flecks, served in a ceramic dish"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Frozen</span> <span>7 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="vanilla-ice-cream">Vanilla, but make it a destination</a></h3>
+            <p class="card-excerpt">Steeping, curing, and the case for using two types of vanilla in one base.</p>
+            <div class="card-footer">
+              <span class="card-author">Nadia K.</span>
+              <span class="card-readtime">Mar 2</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&auto=format&fit=crop" 
+                alt="A close-up of a lemon tart with torched meringue peaks"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Citrus</span> <span>11 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="lemon-tart">The sharp edge: balancing acid in dessert</a></h3>
+            <p class="card-excerpt">Lemon, lime, passionfruit — how to keep brightness without puckering.</p>
+            <div class="card-footer">
+              <span class="card-author">Maya R.</span>
+              <span class="card-readtime">Feb 25</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop" 
+                alt="A stack of thin crepes with drizzled honey and berries"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Breakfast</span> <span>8 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="crepes">Crepes: the quiet art of the paper-thin layer</a></h3>
+            <p class="card-excerpt">Resting the batter, the swirl, and the first-crepe sacrifice.</p>
+            <div class="card-footer">
+              <span class="card-author">Elias V.</span>
+              <span class="card-readtime">Feb 18</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image">
+              <img 
+                src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=600&auto=format&fit=crop" 
+                alt="A small bowl of salted caramel sauce with a spoon lifting a thick ribbon"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-meta"><span>Caramel</span> <span>10 min read</span></div>
+            <h3 class="card-title"><a href="#" data-article="salted-caramel">Salted caramel, twice-tested: soft vs. firm</a></h3>
+            <p class="card-excerpt">Two ratios, one method — and how to pick the right one for your dessert.</p>
+            <div class="card-footer">
+              <span class="card-author">Nadia K.</span>
+              <span class="card-readtime">Feb 10</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT SHORT + AUTHOR -->
+      <section class="about-short">
+        <div>
+          <h2 style="font-size:2rem; margin-bottom:1rem;">Written by people who bake.</h2>
+          <p style="font-size:1.05rem; color:#4F3E35;">
+            Drizzle Dessert House is an independent editorial project. Every recipe is tested 
+            at least twice in a home kitchen, and every technique is explained with the 
+            same care you’d give a soufflé. We don’t chase trends — we chase texture.
+          </p>
+        </div>
+        <div>
+          <div class="author-chip">
+            <div class="author-avatar">MR</div>
+            <div class="author-info">
+              <p>Maya Rivera</p>
+              <span>Founding editor · pastry & chocolate</span>
+            </div>
+          </div>
+          <div class="author-chip" style="margin-top:1rem;">
+            <div class="author-avatar">EV</div>
+            <div class="author-info">
+              <p>Elias Vance</p>
+              <span>Contributing editor · dough & fruit</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========== SINGLE ARTICLE PAGE (shown via JS) ========== -->
+  <div id="articlePage" class="article-page container">
+    <button class="back-home" id="backHomeBtn">← Back to all articles</button>
+    <div class="article-header">
+      <div class="breadcrumb"><a href="#" id="breadcrumbHome">Home</a> / <span id="breadcrumbCategory">Technique</span></div>
+      <h1 class="article-title" id="articleTitle">The quiet science of a perfect caramel</h1>
+      <div class="article-meta-bar">
+        <span>By <strong id="articleAuthor">Maya Rivera</strong></span>
+        <span id="articleDate">Published March 12, 2025</span>
+        <span id="articleReadTime">12 min read</span>
+        <span>Updated <span id="articleUpdated">March 14, 2025</span></span>
+      </div>
+    </div>
+    <div class="article-feature-image">
+      <img 
+        id="articleFeatureImage"
+        src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=900&auto=format&fit=crop" 
+        alt="Caramel being drizzled from a spoon onto a dessert"
+      >
+    </div>
+    <div class="article-body" id="articleBody">
+      <!-- dynamically filled but we include a default long article for immediate view -->
+      <p><strong>Caramel is a transformation.</strong> It begins as plain white crystals and ends as something amber, complex, and deeply savoury. But the window between perfect and burnt is often less than thirty seconds. This guide walks through the stages, the temperatures, and the sensory cues that turn a nerve-wracking process into a confident one.</p>
+      <h2>Why caramel behaves the way it does</h2>
+      <p>Sugar doesn’t “melt” in the way butter does. When heated, sucrose molecules break down and recombine into hundreds of new compounds — some bitter, some nutty, some buttery. That’s why the flavour shifts so dramatically from start to finish. The key is controlling the heat so those reactions happen at the pace <em>you</em> choose.</p>
+      <h3>The three signals: colour, aroma, and smoke</h3>
+      <ul>
+        <li><strong>Colour:</strong> From pale straw to deep mahogany. Your pan matters — a light-coloured pan makes it easier to judge.</li>
+        <li><strong>Aroma:</strong> Early on it smells like plain sugar; as it darkens, you’ll catch toasted nuts, then a faint bitterness.</li>
+        <li><strong>Smoke:</strong> A wisp of smoke means you’re seconds away from bitter. Pull it off the heat immediately.</li>
+      </ul>
+      <h2>The stages, in detail</h2>
+      <table class="article-table">
+        <tr><th>Stage</th><th>Temperature</th><th>Best for</th></tr>
+        <tr><td>Thread</td><td>110°C / 230°F</td><td>Syrups, sorbet bases</td></tr>
+        <tr><td>Soft ball</td><td>115°C / 240°F</td><td>Fudge, fondant</td></tr>
+        <tr><td>Firm ball</td><td>120°C / 248°F</td><td>Chewy caramels</td></tr>
+        <tr><td>Hard crack</td><td>150°C / 300°F</td><td>Brittle, lollipops</td></tr>
+        <tr><td>Amber</td><td>170°C / 340°F</td><td>Sauce, drizzle, flan</td></tr>
+      </table>
+      <p>Notice that “caramel sauce” sits at the far end of the spectrum. That’s because we want those bitter, roasted notes to balance the sweetness. For a soft, chewy caramel candy, you’ll stop much earlier — often around 120°C — and add butter and cream to stop the cooking.</p>
+      <h3>Adding fat and dairy: the stopping power</h3>
+      <p>Butter and cream aren’t just flavour — they’re a safety net. When you whisk them into hot caramel, the temperature drops rapidly and the sugar molecules get coated in fat, preventing them from crystallising. This is why recipes often call for warm cream: cold cream can seize the mixture.</p>
+      <div style="background:#F4E3D0; padding:1.5rem; border-radius:20px; margin:2rem 0;">
+        <p style="font-weight:600; margin-bottom:0.5rem;">💡 Expert note</p>
+        <p style="margin-bottom:0;">If your caramel seizes (turns into a grainy lump), don’t panic. Add a splash of hot water and return it to low heat, whisking gently until smooth. It almost always comes back.</p>
+      </div>
+      <h2>Common mistakes (and how to avoid them)</h2>
+      <ol>
+        <li><strong>Stirring too much at the start.</strong> Sugar crystals on the side of the pan can cause the whole batch to crystallise. Use a wet pastry brush to wash down the sides, or cover with a lid for the first two minutes.</li>
+        <li><strong>Walking away.</strong> Caramel goes from perfect to burnt in under a minute. Stay close.</li>
+        <li><strong>Using a dark pan.</strong> You can’t see the colour change clearly. Use stainless steel or light enamel.</li>
+        <li><strong>Adding cold cream.</strong> It can cause a violent boil-over. Warm it first.</li>
+      </ol>
+      <h2>Frequently asked questions</h2>
+      <p><strong>Can I make caramel without a thermometer?</strong> Yes — rely on colour and smell. Pale amber for a delicate sauce, deep amber for a bold one.</p>
+      <p><strong>Why is my caramel bitter?</strong> You’ve gone past the amber stage. Next time, pull it off the heat a few seconds earlier.</p>
+      <p><strong>How do I store it?</strong> In a glass jar in the fridge for up to two weeks. Reheat gently in a water bath.</p>
+      <h2>Conclusion</h2>
+      <p>Caramel rewards attention. Once you learn to read the cues — the shift in colour, the nutty aroma, the first wisp of smoke — you’ll never need a recipe again. It becomes instinct.</p>
+      <p>For a printable stage chart, visit our <a href="#" style="text-decoration:underline;">Resources page</a>.</p>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="#">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      const homepage = document.getElementById('homepageView');
+      const articlePage = document.getElementById('articlePage');
+      const backBtn = document.getElementById('backHomeBtn');
+      const breadcrumbHome = document.getElementById('breadcrumbHome');
+
+      // Article data (for demo, we reuse the default content already in the DOM)
+      // But we also support switching via data-article on links.
+
+      const articleData = {
+        'salted-caramel': {
+          title: 'Salted caramel, twice-tested: soft vs. firm',
+          author: 'Nadia K.',
+          date: 'February 10, 2025',
+          updated: 'February 12, 2025',
+          readTime: '10 min read',
+          category: 'Caramel',
+          image: 'https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=900&auto=format&fit=crop',
+          alt: 'A bowl of salted caramel with a spoon lifting a thick ribbon',
+          content: `
+            <p><strong>There are two kinds of caramel people.</strong> Those who want a soft, spoonable sauce that pools around ice cream, and those who want a firm, chewy candy that resists just enough. This guide gives you both — same method, different endpoint.</p>
+            <h2>The ratio that matters</h2>
+            <p>For a soft sauce, use equal parts sugar and cream by weight. For a firm caramel, reduce the cream by 30% and add an extra tablespoon of butter. The sugar is always cooked to the same colour — a deep amber — before the dairy goes in.</p>
+            <h3>Soft salted caramel sauce</h3>
+            <ul>
+              <li>200g caster sugar</li>
+              <li>200g heavy cream, warmed</li>
+              <li>60g unsalted butter, room temperature</li>
+              <li>1 tsp flaky sea salt</li>
+            </ul>
+            <p>Cook sugar to amber, whisk in warm cream (it will bubble violently), then butter and salt. Strain and jar.</p>
+            <h3>Firm salted caramels</h3>
+            <ul>
+              <li>200g caster sugar</li>
+              <li>140g heavy cream, warmed</li>
+              <li>80g unsalted butter</li>
+              <li>1.5 tsp flaky sea salt</li>
+            </ul>
+            <p>Same method, but cook the final mixture to 118°C before pouring into a lined pan. Cool, then cut.</p>
+            <div style="background:#F4E3D0; padding:1.5rem; border-radius:20px; margin:2rem 0;">
+              <p style="font-weight:600; margin-bottom:0.5rem;">💡 Expert note</p>
+              <p style="margin-bottom:0;">Sprinkle the salt on top after pouring, not into the pan — it keeps the flakes visible and gives a better crunch.</p>
+            </div>
+            <h2>Why temperature is your friend</h2>
+            <p>For firm caramels, a thermometer is non-negotiable. If you stop at 115°C, they’ll be too soft; at 122°C, they’ll be hard and brittle. 118°C is the sweet spot for a chewy texture that holds its shape.</p>
+            <h2>Common pitfalls</h2>
+            <ul>
+              <li><strong>Crystallisation:</strong> Wash down the sides of the pan with a wet brush before the sugar boils.</li>
+              <li><strong>Burning:</strong> Stay close once the colour turns amber. It goes fast.</li>
+              <li><strong>Graininess:</strong> Don’t stir once the sugar has melted — swirl the pan instead.</li>
+            </ul>
+            <h2>FAQ</h2>
+            <p><strong>Can I use brown sugar?</strong> Yes — it adds molasses depth, but reduce the cream slightly because brown sugar has more moisture.</p>
+            <p><strong>How long do they keep?</strong> Soft sauce: 2 weeks in the fridge. Firm caramels: 3 weeks in an airtight container.</p>
+            <p><strong>Can I double the recipe?</strong> Yes, but use a wider pan so the mixture stays shallow and cooks evenly.</p>
+            <h2>Conclusion</h2>
+            <p>Once you’ve made caramel a few times, you’ll stop measuring and start tasting. That’s the goal.</p>
+          `
+        },
+        'chocolate-ganache': {
+          title: 'The glossy ganache: temperature, ratio, and shine',
+          author: 'Maya R.',
+          date: 'March 12, 2025',
+          updated: 'March 14, 2025',
+          readTime: '12 min read',
+          category: 'Chocolate',
+          image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&auto=format&fit=crop',
+          alt: 'A slice of chocolate cake with glossy ganache dripping down the side',
+          content: `
+            <p><strong>Ganache is just chocolate and cream</strong> — but the ratio and temperature decide whether you get a shiny glaze, a pipeable truffle filling, or a broken, oily mess.</p>
+            <h2>The golden ratios</h2>
+            <table class="article-table">
+              <tr><th>Use</th><th>Chocolate : Cream</th><th>Texture</th></tr>
+              <tr><td>Glaze / drip</td><td>1 : 1</td><td>Pourable, glossy</td></tr>
+              <tr><td>Truffle filling</td><td>1.5 : 1</td><td>Thick, scoopable</td></tr>
+              <tr><td>Whipped frosting</td><td>1 : 0.7</td><td>Light, airy</td></tr>
+            </table>
+            <p>Always use good-quality chocolate — at least 60% cocoa. Cheap chocolate has more cocoa butter substitutes and can seize.</p>
+            <h3>The emulsification window</h3>
+            <p>When you pour hot cream over chocolate, you’re creating an emulsion. The ideal temperature is 45–50°C. If the cream is too hot, the cocoa butter separates; if too cool, the chocolate won’t melt fully. Let the cream cool for 30 seconds after boiling before pouring.</p>
+            <div style="background:#F4E3D0; padding:1.5rem; border-radius:20px; margin:2rem 0;">
+              <p style="font-weight:600; margin-bottom:0.5rem;">💡 Expert note</p>
+              <p style="margin-bottom:0;">If your ganache looks grainy or oily, add a teaspoon of warm milk and whisk vigorously. It usually comes back together.</p>
+            </div>
+            <h2>Step-by-step glossy ganache</h2>
+            <ol>
+              <li>Chop chocolate finely and place in a bowl.</li>
+              <li>Heat cream until just bubbling around the edges (not a rolling boil).</li>
+              <li>Pour over chocolate, wait 1 minute, then stir from the centre out.</li>
+              <li>Add a pinch of salt and a teaspoon of butter for shine.</li>
+              <li>Let cool to 32°C for glazing, or 20°C for piping.</li>
+            </ol>
+            <h2>Mistakes to avoid</h2>
+            <ul>
+              <li><strong>Overheating the cream:</strong> scalds the chocolate and causes a dull finish.</li>
+              <li><strong>Stirring too fast:</strong> incorporates air, which creates bubbles.</li>
+              <li><strong>Using cold utensils:</strong> can cause the chocolate to seize on contact.</li>
+            </ul>
+            <h2>FAQ</h2>
+            <p><strong>Can I make ganache with milk chocolate?</strong> Yes, but use a 1:0.8 ratio (more chocolate) because milk chocolate has more sugar and less cocoa solids.</p>
+            <p><strong>How do I fix a broken ganache?</strong> Warm a few tablespoons of cream and whisk it in, a little at a time.</p>
+            <h2>Conclusion</h2>
+            <p>Ganache is forgiving once you know the rules. Master the ratio, respect the temperature, and you’ll never buy frosting again.</p>
+          `
+        },
+        // fallback for other articles: we reuse the first for demo but change title/author to show it works
+        'pear-tart': {
+          title: 'Frangipane, fruit, and the art of the rustic tart',
+          author: 'Elias V.',
+          date: 'March 8, 2025',
+          updated: 'March 9, 2025',
+          readTime: '9 min read',
+          category: 'Pastry',
+          image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=900&auto=format&fit=crop',
+          alt: 'A rustic pear frangipane tart on parchment paper',
+          content: `
+            <p><strong>A rustic tart is a mood.</strong> It doesn’t demand precision, but it rewards a few small decisions — cold butter, ripe fruit, and a frangipane that stays soft rather than dry.</p>
+            <h2>The dough</h2>
+            <p>Use a standard pâte brisée: 200g flour, 100g cold butter, a pinch of salt, and just enough ice water to bring it together. Rest it for at least an hour before rolling.</p>
+            <h3>The frangipane</h3>
+            <ul>
+              <li>100g almond flour</li>
+              <li>100g softened butter</li>
+              <li>100g caster sugar</li>
+              <li>2 eggs</li>
+              <li>1 tbsp flour</li>
+            </ul>
+            <p>Cream butter and sugar, add eggs one at a time, then fold in almond flour and flour. Spread over the dough, top with sliced pears, and bake at 180°C for 35–40 minutes.</p>
+            <div style="background:#F4E3D0; padding:1.5rem; border-radius:20px; margin:2rem 0;">
+              <p style="font-weight:600; margin-bottom:0.5rem;">💡 Expert note</p>
+              <p style="margin-bottom:0;">Brush the pears with a little apricot jam after baking for a beautiful shine.</p>
+            </div>
+            <h2>Fruit variations</h2>
+            <p>Apples, plums, cherries, and figs all work beautifully. Just adjust the sugar depending on the fruit’s natural sweetness.</p>
+            <h2>Conclusion</h2>
+            <p>The beauty of this tart is its imperfection. Don’t stress the edges — they’re supposed to look hand-made.</p>
+          `
+        }
+      };
+
+      // Function to show article page with specific content
+      function showArticle(slug) {
+        // Hide homepage, show article
+        homepage.classList.add('hidden');
+        articlePage.classList.add('active');
+
+        // Get data for slug, or fallback to 'salted-caramel' if not found
+        const data = articleData[slug] || articleData['salted-caramel'];
+
+        // Populate elements
+        document.getElementById('articleTitle').textContent = data.title;
+        document.getElementById('articleAuthor').textContent = data.author;
+        document.getElementById('articleDate').textContent = `Published ${data.date}`;
+        document.getElementById('articleUpdated').textContent = data.updated;
+        document.getElementById('articleReadTime').textContent = data.readTime;
+        document.getElementById('breadcrumbCategory').textContent = data.category;
+
+        const img = document.getElementById('articleFeatureImage');
+        img.src = data.image;
+        img.alt = data.alt || data.title;
+
+        // Set article body
+        document.getElementById('articleBody').innerHTML = data.content;
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Function to go back to homepage
+      function showHomepage(e) {
+        if (e) e.preventDefault();
+        articlePage.classList.remove('active');
+        homepage.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Attach event listeners to all elements with data-article attribute
+      document.querySelectorAll('[data-article]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const slug = el.getAttribute('data-article');
+          showArticle(slug);
+        });
+      });
+
+      // Back button
+      backBtn.addEventListener('click', showHomepage);
+      breadcrumbHome.addEventListener('click', showHomepage);
+
+      // Handle other links that might trigger article (e.g., the "Read the guide" link)
+      // already covered by data-article
+
+      // For the hero button and featured read-more, they already have data-article
+      // Add listener to the "Start with our caramel guide" button
+      // Already covered.
+
+      // Handle the "Read the guide" link inside featured
+      // Already covered by data-article.
+
+      // Also any other links with data-article? Yes.
+
+      // Make sure that if someone clicks on a link without data-article, it doesn't break.
+      // Some links are just placeholders.
+
+      // Optional: Handle mobile menu (no-op for this demo)
+      document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+        alert('Mobile menu — in a full build, this would open a drawer with navigation.');
+      });
+
+      // Prevent default on all internal links that are just '#'
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        if (!link.hasAttribute('data-article')) {
+          link.addEventListener('click', (e) => e.preventDefault());
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>

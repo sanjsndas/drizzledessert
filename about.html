@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="About Drizzle Dessert House — an independent authority for dessert makers. Our story, values, and the people behind the craft.">
+  <title>About · Drizzle Dessert House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4;
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A;
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- PAGE HERO (about) ---------- */
+    .page-hero {
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      max-width: 900px;
+      margin: 0 auto 1rem;
+    }
+
+    .page-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.3rem;
+      color: #4F3E35;
+    }
+
+    /* ---------- FOUNDER / AUTHOR SPLIT ---------- */
+    .founder-split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .founder-image {
+      border-radius: 30% 70% 40% 60% / 40% 50% 50% 60%;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 1 / 1.1;
+      background: #EADDD0;
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .founder-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .founder-content {
+      max-width: 560px;
+    }
+
+    .founder-content .meta {
+      margin-bottom: 1rem;
+    }
+
+    .founder-content h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .founder-content p {
+      font-size: 1.1rem;
+      color: #4F3E35;
+    }
+
+    .signature {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.6rem;
+      color: var(--caramel);
+      margin-top: 0.5rem;
+    }
+
+    /* ---------- VALUES / PILLARS ---------- */
+    .values-section {
+      background: #F6EDE4;
+      padding: 3.5rem 0;
+      margin: 2.5rem 0;
+      border-radius: 40px 0 40px 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .value-item {
+      background: var(--cream);
+      padding: 2rem 1.8rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid #EADDD0;
+      transition: transform 0.25s ease;
+    }
+
+    .value-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .value-icon {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--caramel);
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .value-item h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .value-item p {
+      font-size: 1rem;
+      color: #5B4A40;
+      margin-bottom: 0;
+    }
+
+    /* ---------- EDITORIAL TEAM ---------- */
+    .team-section {
+      padding: 3rem 0 2rem;
+    }
+
+    .team-section h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-section > .container > p {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      color: #5B4A40;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .team-card {
+      background: var(--cream);
+      border: 1px solid #EADDD0;
+      border-radius: 30px;
+      padding: 2rem 1.5rem 1.8rem;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--caramel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      color: white;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      border: 3px solid var(--butter);
+    }
+
+    .team-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: var(--caramel);
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      font-size: 0.95rem;
+      color: #5B4A40;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ---------- QUOTE / MISSION ---------- */
+    .mission-quote {
+      background: var(--cocoa);
+      color: #FDF9F4;
+      padding: 3.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 40px 0 40px 0;
+      text-align: center;
+    }
+
+    .mission-quote blockquote {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      line-height: 1.4;
+      font-style: italic;
+      color: #FDF9F4;
+    }
+
+    .mission-quote blockquote::before {
+      content: "“";
+      font-size: 4rem;
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-right: 0.1em;
+      color: var(--caramel);
+      font-family: 'DM Serif Display', serif;
+    }
+
+    .mission-quote blockquote::after {
+      content: "”";
+      font-size: 4rem;
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-left: 0.1em;
+      color: var(--caramel);
+      font-family: 'DM Serif Display', serif;
+    }
+
+    .mission-attribution {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #BFAFA0;
+      font-weight: 500;
+    }
+
+    /* ---------- TIMELINE / STORY ---------- */
+    .story-section {
+      padding: 2rem 0 3rem;
+    }
+
+    .story-section h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: #EADDD0;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--caramel);
+      border: 2px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--caramel);
+    }
+
+    .timeline-year {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--caramel);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-item p {
+      font-size: 1rem;
+      color: #5B4A40;
+      margin-bottom: 0;
+    }
+
+    /* ---------- CTA / CONTACT ---------- */
+    .about-cta {
+      text-align: center;
+      padding: 2rem 0 4rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .about-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .about-cta p {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      color: #5B4A40;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--cocoa);
+      color: white;
+      font-weight: 500;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      transition: background 0.25s ease, transform 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--caramel);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- UTILITY ---------- */
+    .divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 2rem 0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .founder-split {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .founder-split {
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
+      }
+      .founder-image {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+      .timeline {
+        padding-left: 2rem;
+      }
+      .timeline::before {
+        left: 6px;
+      }
+      .timeline-item::before {
+        left: -2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .page-hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" style="color:var(--caramel);">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== ABOUT PAGE CONTENT ========== -->
+  <main>
+    <!-- HERO -->
+    <section class="page-hero container fade-up">
+      <h1>We are Drizzle.</h1>
+      <p>An independent dessert publication for people who care about texture, balance, and the quiet craft of finishing well.</p>
+    </section>
+
+    <!-- FOUNDER SPLIT -->
+    <section class="container founder-split">
+      <div class="founder-image fade-up">
+        <img 
+          src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&auto=format&fit=crop" 
+          alt="Maya Rivera, founding editor of Drizzle Dessert House, in a home kitchen with flour on her apron"
+          loading="lazy"
+        >
+      </div>
+      <div class="founder-content fade-up delay-1">
+        <div class="meta">From the founding editor</div>
+        <h2>Maya Rivera</h2>
+        <p>I started Drizzle after years of baking in a small apartment kitchen, scribbling notes on the backs of envelopes. I wanted a place where technique wasn’t rushed, where a recipe could be read like a short story, and where the science of sugar was treated with the same reverence as a sourdough starter.</p>
+        <p>Every article you read here has been tested at least twice — usually more. We don’t publish anything we wouldn’t serve to our own families. And we never chase trends; we chase the perfect crumb, the glossy ganache, the caramel that sits right on the edge of bitter.</p>
+        <div class="signature">— Maya</div>
+      </div>
+    </section>
+
+    <!-- MISSION QUOTE -->
+    <section class="container mission-quote fade-up delay-2">
+      <blockquote>We believe dessert is not decoration. It is craft — and it deserves the same rigour as any other discipline.</blockquote>
+      <div class="mission-attribution">The Drizzle editorial team</div>
+    </section>
+
+    <!-- VALUES / PILLARS -->
+    <section class="container values-section">
+      <h2 style="text-align:center; margin-bottom:0.5rem;">What we stand for</h2>
+      <p style="text-align:center; max-width:600px; margin:0 auto 0.5rem; color:#5B4A40;">Three principles guide every recipe, guide, and essay we publish.</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">01</div>
+          <h3>Tested twice, always</h3>
+          <p>No recipe leaves our kitchen until it has been baked, chilled, or caramelised at least twice — once to develop, once to verify. We note the variables so you can adapt with confidence.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">02</div>
+          <h3>Technique over trend</h3>
+          <p>We’re not interested in the latest viral hack. We’re interested in why a fold works, how temperature changes texture, and what a recipe teaches you about craft.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">03</div>
+          <h3>Generous, not gatekeeping</h3>
+          <p>Every guide is written to be understood by a home baker with a modest kitchen. We explain the “why” so you can improvise, substitute, and make it yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / TIMELINE -->
+    <section class="container story-section">
+      <h2>How we got here</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2019</div>
+          <h3>A notebook and a rented oven</h3>
+          <p>Maya begins documenting caramel experiments on a food blog called “The Drizzle.” It’s read by eleven people, most of them friends.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <h3>Elias joins, and the test kitchen doubles</h3>
+          <p>Elias Vance, a pastry chef with a obsession for dough, comes on board. Together they formalise the twice-tested rule and start publishing long-form technique guides.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <h3>Drizzle Dessert House is born</h3>
+          <p>The blog becomes a full publication. Nadia K. joins to lead frozen desserts and chocolate work. The first print-style digital issue is released to 4,000 subscribers.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <h3>Still independent, still testing</h3>
+          <p>We publish weekly, remain ad-free, and continue to test every recipe in a home kitchen. Our archive now holds over 120 guides.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL TEAM -->
+    <section class="container team-section">
+      <h2>The people behind the butter</h2>
+      <p>Writers, bakers, and one very persistent recipe tester.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">MR</div>
+          <h3>Maya Rivera</h3>
+          <div class="team-role">Founding editor · Pastry & Chocolate</div>
+          <p class="team-bio">Former line cook turned recipe developer. Maya has a weakness for burnt caramel and a strong opinion about vanilla.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">EV</div>
+          <h3>Elias Vance</h3>
+          <div class="team-role">Contributing editor · Dough & Fruit</div>
+          <p class="team-bio">Elias believes a rustic tart should look like it was made by a human. He tests every dough recipe at least three times.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">NK</div>
+          <h3>Nadia K.</h3>
+          <div class="team-role">Senior writer · Frozen & Sauces</div>
+          <p class="team-bio">Nadia is the reason our caramel sauce has a cult following. She keeps a thermometer in her apron pocket at all times.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="container about-cta">
+      <h2>Want to say hello?</h2>
+      <p>We love hearing from readers, whether you have a question about a recipe or just want to share a photo of your latest bake.</p>
+      <a href="contact.html" class="btn-primary">Contact the editors →</a>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="about.html">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT (minimal for about page) ========== -->
+  <script>
+    (function() {
+      // Simple mobile menu placeholder
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          alert('Mobile menu — in a full build, this would open a drawer with navigation.');
+        });
+      }
+
+      // Prevent default on placeholder links
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (!link.closest('.footer-links') && !link.closest('.main-nav')) {
+            e.preventDefault();
+          }
+        });
+      });
+
+      // Add a subtle active state to nav (about is already colored inline, but just in case)
+      // No additional logic needed.
+    })();
+  </script>
+</body>
+</html>

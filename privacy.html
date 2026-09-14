@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Drizzle Dessert House — Privacy Policy. How we collect, use, and protect your personal information.">
+  <title>Drizzle Dessert House · Privacy Policy</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4; /* vanilla cream */
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A; /* deep cocoa */
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C; /* burnt caramel */
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- PRIVACY PAGE SPECIFIC ---------- */
+    .privacy-hero {
+      padding: 3.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .privacy-hero h1 {
+      font-size: clamp(2.6rem, 8vw, 4.4rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .privacy-hero p {
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      font-size: 1.25rem;
+      color: #4F3E35;
+    }
+
+    .privacy-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .privacy-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .privacy-content {
+      padding: 2rem 0 4rem;
+    }
+
+    .privacy-card {
+      background: var(--sugar);
+      border-radius: 32px 8px 32px 8px;
+      padding: 3rem 3.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .privacy-card h2 {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #F0E6DE;
+    }
+
+    .privacy-card h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .privacy-card h3 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .privacy-card p {
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      color: #3E2E25;
+    }
+
+    .privacy-card ul {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      padding-left: 0.25rem;
+    }
+
+    .privacy-card ul li {
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #3E2E25;
+    }
+
+    .privacy-card ul li::before {
+      content: "•";
+      color: var(--caramel);
+      font-weight: 700;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 0.2rem;
+      top: -0.2rem;
+    }
+
+    .privacy-card .highlight-box {
+      background: #FDF9F4;
+      border-left: 6px solid var(--caramel);
+      padding: 1.5rem 2rem;
+      border-radius: 0 20px 20px 0;
+      margin: 2rem 0;
+    }
+
+    .privacy-card .highlight-box p {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .privacy-card .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-card .small-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .privacy-card a {
+      color: var(--caramel);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .privacy-card a:hover {
+      color: #8F452E;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .privacy-card {
+        padding: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .privacy-card {
+        padding: 2rem 1.5rem;
+      }
+      .privacy-meta {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .privacy-hero h1 {
+        font-size: 2.2rem;
+      }
+      .privacy-card h2 {
+        font-size: 1.6rem;
+      }
+      .privacy-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== PRIVACY MAIN ========== -->
+  <main>
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="privacy-hero fade-up">
+        <h1>Privacy Policy</h1>
+        <p>Your data, handled with the same care as our caramel. Here’s exactly how we collect, use, and protect your information.</p>
+        <div class="privacy-meta">
+          <span>📅 Last updated: 1 April 2025</span>
+          <span>⏱️ 6 min read</span>
+          <span>📬 Effective immediately</span>
+        </div>
+      </section>
+
+      <!-- CONTENT CARD -->
+      <div class="privacy-content">
+        <div class="privacy-card fade-up delay-1">
+
+          <p><strong>Drizzle Dessert House</strong> ("we", "us", "our") operates the website and services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our site, subscribe to our newsletter, or interact with us in any way.</p>
+
+          <div class="highlight-box">
+            <p>📌 <strong>The short version:</strong> We only collect what we need to run a respectful, functional dessert publication. We never sell your data. You can ask us to delete it at any time.</p>
+          </div>
+
+          <h2>1. Information we collect</h2>
+          <p>We collect information that you voluntarily provide to us when you:</p>
+          <ul>
+            <li>Subscribe to our newsletter (name and email address).</li>
+            <li>Submit a contact form or recipe question (name, email, message content).</li>
+            <li>Participate in a survey, giveaway, or comment section.</li>
+            <li>Communicate with us via email or social media.</li>
+          </ul>
+          <p>We also automatically collect certain technical data when you visit our site, such as your IP address, browser type, operating system, referring URLs, and pages viewed. This helps us understand how our content is used and improve your experience.</p>
+
+          <h3>Cookies & similar technologies</h3>
+          <p>We use cookies and similar tracking technologies to analyse trends, administer the site, and track users’ movements around the site. You can control cookies through your browser settings. For more details, please see our <a href="cookies.html">Cookies Policy</a>.</p>
+
+          <h2>2. How we use your information</h2>
+          <p>We use the information we collect for the following purposes:</p>
+          <ul>
+            <li>To send you our newsletter and updates (only if you opt in).</li>
+            <li>To respond to your enquiries, questions, and requests.</li>
+            <li>To improve our website, recipes, and editorial content.</li>
+            <li>To detect, prevent, and address technical or security issues.</li>
+            <li>To comply with legal obligations.</li>
+          </ul>
+
+          <h2>3. Legal basis for processing (GDPR & UK GDPR)</h2>
+          <p>If you are located in the European Economic Area (EEA) or the UK, our legal basis for collecting and using your personal information depends on the data and the context in which we collect it:</p>
+          <ul>
+            <li><strong>Consent:</strong> You have given us clear consent to process your data for a specific purpose (e.g., newsletter subscription).</li>
+            <li><strong>Contract:</strong> Processing is necessary for a contract we have with you.</li>
+            <li><strong>Legitimate interests:</strong> Processing is necessary for our legitimate interests, such as improving our services, provided your rights do not override those interests.</li>
+            <li><strong>Legal obligation:</strong> Processing is necessary to comply with the law.</li>
+          </ul>
+
+          <h2>4. Sharing & disclosure</h2>
+          <p>We do <strong>not</strong> sell, trade, or rent your personal information to third parties. We may share your data only in these limited circumstances:</p>
+          <ul>
+            <li><strong>Service providers:</strong> Trusted third parties who help us operate our website, send newsletters, or analyse site usage (e.g., email delivery services, analytics providers). These providers are contractually bound to protect your data.</li>
+            <li><strong>Legal requirements:</strong> If required by law, court order, or governmental authority.</li>
+            <li><strong>Business transfers:</strong> In the unlikely event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will notify you before your data is transferred and becomes subject to a different privacy policy.</li>
+          </ul>
+
+          <h2>5. Data retention</h2>
+          <p>We retain your personal information only for as long as necessary to fulfil the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. For newsletter subscribers, we keep your email until you unsubscribe. For contact form enquiries, we retain messages for up to 24 months for reference purposes.</p>
+
+          <h2>6. Security</h2>
+          <p>We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. These measures include encryption, access controls, and secure server infrastructure. However, no method of transmission over the Internet is 100% secure — we cannot guarantee absolute security.</p>
+
+          <h2>7. Your rights</h2>
+          <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+            <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete data.</li>
+            <li><strong>Erasure:</strong> Request that we delete your personal data (the "right to be forgotten").</li>
+            <li><strong>Restriction:</strong> Request that we limit the processing of your data.</li>
+            <li><strong>Objection:</strong> Object to our processing of your data based on legitimate interests.</li>
+            <li><strong>Data portability:</strong> Request transfer of your data to another organisation.</li>
+            <li><strong>Withdraw consent:</strong> Withdraw your consent at any time (e.g., unsubscribe from our newsletter).</li>
+          </ul>
+          <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@drizzledessert.house">privacy@drizzledessert.house</a>. We will respond within 30 days.</p>
+
+          <h2>8. International transfers</h2>
+          <p>Your information may be transferred to — and maintained on — computers located outside of your state, province, or country where data protection laws may differ. If you are located in the EEA or UK, we will take steps to ensure your data receives adequate protection, such as using standard contractual clauses approved by the European Commission.</p>
+
+          <h2>9. Children’s privacy</h2>
+          <p>Our website is not intended for children under 16. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately and we will take steps to delete it.</p>
+
+          <h2>10. Third-party links</h2>
+          <p>Our site may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to read the privacy policies of any website you visit.</p>
+
+          <h2>11. Changes to this policy</h2>
+          <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. We encourage you to review this policy periodically.</p>
+
+          <div class="highlight-box" style="background: #F6EDE4; border-left-color: #2A1F1A;">
+            <p>📬 <strong>Questions?</strong> If you have any questions or concerns about this Privacy Policy or how your data is handled, please email us at <a href="mailto:privacy@drizzledessert.house">privacy@drizzledessert.house</a> or write to us at: Drizzle Dessert House, 14 Butter Lane, Studio 3, Brooklyn, NY 11201.</p>
+          </div>
+
+          <p class="small-note">This Privacy Policy is effective as of 1 April 2025. If you have any questions about your rights or our practices, please don't hesitate to reach out — we're here to help, just like we are with your bakes.</p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="#">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPT (simple demo interactions) ========== -->
+  <script>
+    (function() {
+      // Mobile menu placeholder
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          alert('Mobile menu — in a full build, this would open a navigation drawer.');
+        });
+      }
+
+      // Prevent default on placeholder links
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+      });
+
+      // Focus on the first heading for accessibility (optional)
+      // if (window.location.hash === '#privacy') {
+      //   const heading = document.querySelector('h1');
+      //   if (heading) heading.focus();
+      // }
+    })();
+  </script>
+</body>
+</html>

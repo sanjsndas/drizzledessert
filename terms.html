@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Terms of Privacy for Drizzle Dessert House — how we handle your data, our editorial independence, and the terms that govern our publication.">
+  <title>Terms of Privacy · Drizzle Dessert House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4;
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A;
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- PAGE HERO (terms) ---------- */
+    .page-hero {
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      max-width: 900px;
+      margin: 0 auto 1rem;
+    }
+
+    .page-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.3rem;
+      color: #4F3E35;
+    }
+
+    /* ---------- LEGAL CONTENT ---------- */
+    .legal-content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .legal-content .last-updated {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #7C6B5E;
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .legal-content h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .legal-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal-content h3 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .legal-content p {
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      color: #3E2E25;
+    }
+
+    .legal-content ul, .legal-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 0;
+    }
+
+    .legal-content li {
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #3E2E25;
+    }
+
+    .legal-content ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--caramel);
+      font-weight: 500;
+    }
+
+    .legal-content ol {
+      counter-reset: legal-counter;
+    }
+
+    .legal-content ol li {
+      counter-increment: legal-counter;
+    }
+
+    .legal-content ol li::before {
+      content: counter(legal-counter) ".";
+      position: absolute;
+      left: 0;
+      color: var(--caramel);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .legal-content strong {
+      font-weight: 600;
+      color: #2A1F1A;
+    }
+
+    .legal-highlight {
+      background: #F6EDE4;
+      padding: 1.8rem 2rem;
+      border-radius: 20px;
+      border-left: 4px solid var(--caramel);
+      margin: 2rem 0;
+    }
+
+    .legal-highlight p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: #4F3E35;
+    }
+
+    .legal-highlight p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .legal-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 3rem 0;
+    }
+
+    /* ---------- CONTACT BOX ---------- */
+    .legal-contact {
+      background: #F6EDE4;
+      padding: 2.5rem 2rem;
+      border-radius: 30px 0 30px 0;
+      margin: 3rem 0 1rem;
+      text-align: center;
+    }
+
+    .legal-contact h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    .legal-contact p {
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+      font-size: 1rem;
+    }
+
+    .legal-contact a {
+      color: var(--caramel);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .legal-contact a:hover {
+      border-bottom-color: var(--caramel);
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn-primary {
+      display: inline-block;
+      background: var(--cocoa);
+      color: white;
+      font-weight: 500;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      transition: background 0.25s ease, transform 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--caramel);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- UTILITY ---------- */
+    .divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 2rem 0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+      .legal-content {
+        padding: 1rem 0 2rem;
+      }
+      .legal-highlight {
+        padding: 1.5rem 1.5rem;
+      }
+      .legal-contact {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .page-hero h1 {
+        font-size: 2.4rem;
+      }
+      .legal-content h2 {
+        font-size: 1.5rem;
+      }
+      .legal-content li {
+        padding-left: 1.5rem;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html" style="color:var(--caramel);">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== TERMS PAGE CONTENT ========== -->
+  <main>
+    <!-- HERO -->
+    <section class="page-hero container fade-up">
+      <h1>Terms of Privacy</h1>
+      <p>How we handle your data, our editorial independence, and the terms that govern our publication.</p>
+    </section>
+
+    <!-- LEGAL CONTENT -->
+    <section class="container legal-content fade-up delay-1">
+      <div class="last-updated">Last updated: March 2025</div>
+
+      <p>Drizzle Dessert House ("we," "us," or "our") operates this website and publishes independent dessert journalism, recipes, and technique guides. This page explains the terms under which we publish, how we treat your privacy, and the relationship between you (the reader) and us.</p>
+
+      <p>We've written this in plain language because we believe terms should be readable, not just legally defensible. If anything is unclear, please <a href="contact.html" style="color:var(--caramel); font-weight:500;">contact us</a>.</p>
+
+      <!-- SECTION 1 -->
+      <h2>1. Our editorial independence</h2>
+      <p>Drizzle Dessert House is an independent publication. We do not accept sponsored content, affiliate placements, or payment in exchange for editorial coverage. Our recipes and guides are developed in our own kitchen, tested according to our <a href="about.html" style="color:var(--caramel); font-weight:500;">twice-tested rule</a>, and published because we believe they are useful, accurate, and worth your time.</p>
+      <p>We may occasionally link to ingredients, tools, or books we genuinely use and recommend. These are never paid placements, and we disclose any relationship that could reasonably be perceived as a conflict of interest.</p>
+
+      <div class="legal-highlight">
+        <p><strong>Our promise:</strong> No hidden ads. No sponsored recipes. No selling your email address. We publish for readers, not for advertisers.</p>
+      </div>
+
+      <!-- SECTION 2 -->
+      <h2>2. Information we collect</h2>
+      <p>We collect only the minimum information necessary to operate the publication and communicate with you.</p>
+      <h3>2.1 Information you provide voluntarily</h3>
+      <ul>
+        <li><strong>Newsletter subscriptions:</strong> If you subscribe to our newsletter, we collect your email address. We use it solely to send you updates about new recipes, guides, and editorial features.</li>
+        <li><strong>Contact form submissions:</strong> If you contact us via our contact page, we receive your name, email address, and the content of your message. We use this only to respond to you.</li>
+        <li><strong>Comments and feedback:</strong> If we enable comments or feedback features, any information you submit may be stored and displayed publicly.</li>
+      </ul>
+
+      <h3>2.2 Information collected automatically</h3>
+      <p>Like most websites, we may collect basic technical information when you visit:</p>
+      <ul>
+        <li>Browser type and version</li>
+        <li>Device type and operating system</li>
+        <li>Pages you visit on our site and time spent</li>
+        <li>Referring website or source</li>
+        <li>General geographic location (at the city or region level, not precise GPS)</li>
+      </ul>
+      <p>This information is aggregated and used to understand how readers use our site so we can improve it. We do not use it to identify you personally.</p>
+
+      <!-- SECTION 3 -->
+      <h2>3. How we use your information</h2>
+      <p>We use the information we collect for the following purposes only:</p>
+      <ol>
+        <li><strong>To communicate with you:</strong> Responding to your questions, sending newsletters you requested, and notifying you about changes to our terms or policies.</li>
+        <li><strong>To improve our publication:</strong> Understanding which recipes and guides are most useful to readers, and identifying technical issues.</li>
+        <li><strong>To maintain security:</strong> Protecting against spam, abuse, and unauthorized access.</li>
+        <li><strong>To comply with legal obligations:</strong> If required by law, we may need to retain or disclose certain information.</li>
+      </ol>
+      <p>We do not sell, rent, or trade your personal information to third parties. Ever.</p>
+
+      <!-- SECTION 4 -->
+      <h2>4. Cookies and tracking</h2>
+      <p>We use a minimal number of cookies and similar technologies to operate our website and understand reader behavior. These include:</p>
+      <ul>
+        <li><strong>Essential cookies:</strong> Required for the site to function (e.g., remembering your cookie preferences).</li>
+        <li><strong>Analytics cookies:</strong> Used to collect aggregated, anonymized data about how readers use our site (e.g., which pages are most popular). We use privacy-respecting analytics where possible.</li>
+        <li><strong>Preference cookies:</strong> Used to remember settings you've chosen, such as whether you've dismissed a banner.</li>
+      </ul>
+      <p>You can control or delete cookies through your browser settings. For more details, please see our <a href="cookies.html" style="color:var(--caramel); font-weight:500;">Cookies Policy</a>.</p>
+
+      <!-- SECTION 5 -->
+      <h2>5. Third-party services</h2>
+      <p>We may use trusted third-party services to help operate our publication. These providers only receive the information necessary to perform their specific function, and they are contractually obligated to protect it:</p>
+      <ul>
+        <li><strong>Email newsletter platform:</strong> To deliver our newsletter to subscribers. Your email address is stored with this provider.</li>
+        <li><strong>Website hosting provider:</strong> To serve our website. Basic technical data (like IP addresses) may be processed as part of normal server operation.</li>
+        <li><strong>Analytics provider:</strong> To understand site usage in aggregate.</li>
+      </ul>
+      <p>We choose providers that share our commitment to privacy and data minimization.</p>
+
+      <!-- SECTION 6 -->
+      <h2>6. Your rights and choices</h2>
+      <p>Depending on where you live, you may have specific rights regarding your personal information. We extend the following rights to all readers, regardless of location:</p>
+      <ul>
+        <li><strong>Access:</strong> You can request a copy of the personal information we hold about you.</li>
+        <li><strong>Correction:</strong> You can ask us to correct inaccurate information.</li>
+        <li><strong>Deletion:</strong> You can ask us to delete your personal information, and we will do so unless we are legally required to retain it.</li>
+        <li><strong>Unsubscribe:</strong> You can unsubscribe from our newsletter at any time using the link in every email we send.</li>
+        <li><strong>Objection:</strong> You can object to certain processing of your information.</li>
+      </ul>
+      <p>To exercise any of these rights, please <a href="contact.html" style="color:var(--caramel); font-weight:500;">contact us</a>. We will respond within 30 days.</p>
+
+      <!-- SECTION 7 -->
+      <h2>7. Data retention</h2>
+      <p>We retain personal information only as long as necessary for the purposes described in this policy:</p>
+      <ul>
+        <li><strong>Newsletter subscriptions:</strong> Retained until you unsubscribe, plus a short period afterward to honor your request.</li>
+        <li><strong>Contact form messages:</strong> Retained for up to 12 months so we can reference past conversations.</li>
+        <li><strong>Analytics data:</strong> Retained in aggregated, anonymized form indefinitely.</li>
+      </ul>
+
+      <!-- SECTION 8 -->
+      <h2>8. Children's privacy</h2>
+      <p>Drizzle Dessert House is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us, and we will delete it promptly.</p>
+
+      <!-- SECTION 9 -->
+      <h2>9. Changes to these terms</h2>
+      <p>We may update these terms from time to time to reflect changes in our practices or for legal reasons. When we make significant changes, we will notify newsletter subscribers and post a prominent notice on our website. The "last updated" date at the top of this page indicates when the most recent changes were made.</p>
+      <p>Your continued use of our website after changes are posted constitutes acceptance of the updated terms.</p>
+
+      <!-- SECTION 10 -->
+      <h2>10. Limitation of liability</h2>
+      <p>Drizzle Dessert House publishes recipes and guides in good faith, based on our own testing and experience. However, we cannot guarantee specific results — baking and cooking involve variables beyond our control, including ingredient quality, equipment, altitude, and technique.</p>
+      <p>You use our recipes and information at your own discretion and risk. We are not liable for any loss, damage, or injury resulting from your use of our content, including but not limited to allergic reactions, foodborne illness, or property damage.</p>
+      <p>Always use your own judgment regarding food safety, allergies, and dietary restrictions.</p>
+
+      <!-- SECTION 11 -->
+      <h2>11. Governing law</h2>
+      <p>These terms are governed by the laws of the State of Oregon, United States, without regard to conflict of law principles. Any disputes arising from these terms or your use of our website shall be resolved in the courts located in Multnomah County, Oregon.</p>
+
+      <div class="legal-divider"></div>
+
+      <!-- CONTACT -->
+      <div class="legal-contact">
+        <h3>Questions about these terms?</h3>
+        <p>We're happy to clarify anything on this page. Reach out and a human will respond.</p>
+        <a href="contact.html" class="btn-primary" style="color:white;">Contact the editors →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="about.html">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      // Simple mobile menu placeholder
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          alert('Mobile menu — in a full build, this would open a drawer with navigation.');
+        });
+      }
+
+      // Prevent default on placeholder links (excluding specific real links)
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (!link.closest('.footer-links') && !link.closest('.main-nav')) {
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Drizzle Dessert House — Cookies Policy. How we use cookies and similar technologies on our site.">
+  <title>Drizzle Dessert House · Cookies Policy</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE (same as privacy page, consistent) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FDF9F4; /* vanilla cream */
+      font-size: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2A1F1A; /* deep cocoa */
+      background-color: #FDF9F4;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: #B45A3C; /* burnt caramel */
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #2A1F1A;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: #3E2E25;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #7C6B5E;
+    }
+
+    .small-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9C8B7D;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --cream: #FDF9F4;
+      --cocoa: #2A1F1A;
+      --caramel: #B45A3C;
+      --butter: #F4E3D0;
+      --sugar: #FFFFFF;
+      --muted: #7C6B5E;
+      --border-light: #EADDD0;
+      --shadow-sm: 0 8px 20px -8px rgba(42, 31, 26, 0.08);
+      --shadow-md: 0 16px 30px -12px rgba(42, 31, 26, 0.1);
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .content-width {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .narrow-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ---------- HEADER (identical) ---------- */
+    .site-header {
+      background-color: var(--cream);
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel);
+      border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+      transform: rotate(10deg);
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: "~~~";
+      position: absolute;
+      top: -8px;
+      left: 6px;
+      font-size: 1.2rem;
+      color: var(--caramel);
+      font-weight: 700;
+      letter-spacing: -2px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2.25rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a {
+      color: var(--cocoa);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--caramel);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--caramel);
+      color: var(--cocoa);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: var(--cocoa);
+      line-height: 1;
+    }
+
+    /* ---------- COOKIES PAGE SPECIFIC (reusing privacy styles) ---------- */
+    .privacy-hero {
+      padding: 3.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .privacy-hero h1 {
+      font-size: clamp(2.6rem, 8vw, 4.4rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .privacy-hero p {
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      font-size: 1.25rem;
+      color: #4F3E35;
+    }
+
+    .privacy-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .privacy-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .privacy-content {
+      padding: 2rem 0 4rem;
+    }
+
+    .privacy-card {
+      background: var(--sugar);
+      border-radius: 32px 8px 32px 8px;
+      padding: 3rem 3.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .privacy-card h2 {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #F0E6DE;
+    }
+
+    .privacy-card h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .privacy-card h3 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .privacy-card p {
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      color: #3E2E25;
+    }
+
+    .privacy-card ul {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      padding-left: 0.25rem;
+    }
+
+    .privacy-card ul li {
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #3E2E25;
+    }
+
+    .privacy-card ul li::before {
+      content: "•";
+      color: var(--caramel);
+      font-weight: 700;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 0.2rem;
+      top: -0.2rem;
+    }
+
+    .privacy-card .highlight-box {
+      background: #FDF9F4;
+      border-left: 6px solid var(--caramel);
+      padding: 1.5rem 2rem;
+      border-radius: 0 20px 20px 0;
+      margin: 2rem 0;
+    }
+
+    .privacy-card .highlight-box p {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .privacy-card .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-card .small-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .privacy-card a {
+      color: var(--caramel);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .privacy-card a:hover {
+      color: #8F452E;
+    }
+
+    /* cookie table styling */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.75rem 0 2rem;
+      font-size: 0.95rem;
+      background: #FEFCF9;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .cookie-table th {
+      background: #F4E3D0;
+      color: #2A1F1A;
+      font-weight: 600;
+      text-align: left;
+      padding: 1rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 2px solid #EADDD0;
+    }
+
+    .cookie-table td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid #F0E6DE;
+      color: #3E2E25;
+      vertical-align: top;
+    }
+
+    .cookie-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cookie-table strong {
+      color: #2A1F1A;
+      font-weight: 600;
+    }
+
+    /* ---------- FOOTER (identical) ---------- */
+    .site-footer {
+      background: var(--cocoa);
+      color: #F0E6DE;
+      padding: 3.5rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #CBB9AC;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: #BFAFA0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #E6D9D0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4F3E35;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #BFAFA0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .privacy-card {
+        padding: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .header-inner {
+        flex-wrap: wrap;
+      }
+      .privacy-card {
+        padding: 2rem 1.5rem;
+      }
+      .privacy-meta {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+      .cookie-table {
+        font-size: 0.85rem;
+      }
+      .cookie-table th,
+      .cookie-table td {
+        padding: 0.75rem 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+      }
+      .privacy-hero h1 {
+        font-size: 2.2rem;
+      }
+      .privacy-card h2 {
+        font-size: 1.6rem;
+      }
+      .privacy-card {
+        padding: 1.5rem;
+      }
+      .cookie-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    /* ---------- MICRO ANIMATIONS ---------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+
+    :focus-visible {
+      outline: 3px solid var(--caramel);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Drizzle Dessert House home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text">
+          Drizzle
+          <span>Dessert House</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+      <button class="search-toggle" aria-label="Search recipes and guides">
+        <span aria-hidden="true">⌕</span> Search
+      </button>
+      <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== COOKIES MAIN ========== -->
+  <main>
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="privacy-hero fade-up">
+        <h1>Cookies Policy</h1>
+        <p>We use cookies to make your visit as smooth as our crème anglaise. Here’s everything you need to know — no cryptic crumbs.</p>
+        <div class="privacy-meta">
+          <span>📅 Last updated: 1 April 2025</span>
+          <span>⏱️ 4 min read</span>
+          <span>🍪 Applies to all visitors</span>
+        </div>
+      </section>
+
+      <!-- CONTENT CARD -->
+      <div class="privacy-content">
+        <div class="privacy-card fade-up delay-1">
+
+          <p><strong>Drizzle Dessert House</strong> ("we", "us", "our") uses cookies and similar tracking technologies on our website. This Cookies Policy explains what cookies are, how we use them, and your choices regarding their use. It should be read alongside our <a href="privacy.html">Privacy Policy</a>.</p>
+
+          <div class="highlight-box">
+            <p>🍪 <strong>Quick summary:</strong> We use essential cookies to make our site work, plus analytics cookies to understand how you interact with our content. You can control non-essential cookies through your browser settings.</p>
+          </div>
+
+          <h2>1. What are cookies?</h2>
+          <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies help us remember your preferences, understand how you use our site, and improve your overall experience.</p>
+          <p>Cookies can be "persistent" (remain on your device until they expire or you delete them) or "session" cookies (deleted when you close your browser).</p>
+
+          <h2>2. How we use cookies</h2>
+          <p>We use cookies for the following purposes:</p>
+          <ul>
+            <li><strong>Essential / strictly necessary cookies:</strong> Required for the website to function properly. They enable core features like page navigation, secure areas, and cookie consent preferences. You cannot opt out of these.</li>
+            <li><strong>Analytics and performance cookies:</strong> Help us understand how visitors interact with our site by collecting anonymous information (e.g., pages visited, time spent). We use this to improve our content and user experience.</li>
+            <li><strong>Functionality cookies:</strong> Allow the site to remember choices you make (such as your language or region) and provide enhanced, more personal features.</li>
+            <li><strong>Targeting / advertising cookies (if applicable):</strong> We do not currently use advertising cookies. Should we introduce them in the future, we will update this policy and seek your consent where required.</li>
+          </ul>
+
+          <h2>3. Specific cookies we use</h2>
+          <p>Below is a list of the main cookies we use and their purposes. We keep this list as up-to-date as possible, but third-party cookies may change without notice.</p>
+
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie name</th>
+                <th>Type</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>drizzle_consent</strong></td>
+                <td>Essential</td>
+                <td>Stores your cookie consent preferences so we don't ask you again on every visit.</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td><strong>drizzle_session</strong></td>
+                <td>Essential</td>
+                <td>Maintains your session state while you browse the site (e.g., form submissions).</td>
+                <td>Session</td>
+              </tr>
+              <tr>
+                <td><strong>_ga</strong></td>
+                <td>Analytics</td>
+                <td>Used by Google Analytics to distinguish unique users and track page views anonymously.</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td><strong>_gid</strong></td>
+                <td>Analytics</td>
+                <td>Used by Google Analytics to store and update a unique value for each page visited.</td>
+                <td>24 hours</td>
+              </tr>
+              <tr>
+                <td><strong>drizzle_prefs</strong></td>
+                <td>Functionality</td>
+                <td>Remembers your display preferences (e.g., dark/light mode, font size) if you set any.</td>
+                <td>6 months</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>4. Third-party cookies</h2>
+          <p>Some cookies are placed by third-party services that appear on our pages. For example, we use Google Analytics to help us understand site usage. These third parties may set their own cookies and have their own privacy policies. We do not control these cookies.</p>
+          <ul>
+            <li><strong>Google Analytics:</strong> Helps us analyse traffic and usage patterns. You can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.</li>
+            <li><strong>Embedded content:</strong> If we embed content from platforms like YouTube or Instagram, they may set cookies when you interact with that content.</li>
+          </ul>
+
+          <h2>5. Your cookie choices</h2>
+          <p>You have several options to manage or disable cookies:</p>
+          <ul>
+            <li><strong>Browser settings:</strong> Most web browsers allow you to control cookies through their settings. You can set your browser to refuse cookies or delete certain cookies. Check your browser's help section for instructions.</li>
+            <li><strong>Consent tool:</strong> When you first visit our site, you may see a banner allowing you to accept or reject non-essential cookies. You can change your preferences at any time by clearing your browser cookies and revisiting the site.</li>
+            <li><strong>Opt-out links:</strong> For third-party analytics, you can use the opt-out links provided above.</li>
+          </ul>
+          <p>Please note: If you disable essential cookies, some parts of the website may not function properly.</p>
+
+          <h2>6. Do Not Track signals</h2>
+          <p>Some browsers have a "Do Not Track" (DNT) feature that signals to websites that you do not want to be tracked. Our site does not currently respond to DNT signals, but you can still manage cookies through your browser settings.</p>
+
+          <h2>7. Changes to this Cookies Policy</h2>
+          <p>We may update this Cookies Policy from time to time to reflect changes in technology, legislation, or our practices. Any updates will be posted on this page with a revised "Last updated" date. We encourage you to review this page periodically.</p>
+
+          <h2>8. More information</h2>
+          <p>If you have questions about our use of cookies or this policy, please contact us at <a href="mailto:privacy@drizzledessert.house">privacy@drizzledessert.house</a>. For more general information about cookies and how to manage them, you may find <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer">aboutcookies.org</a> helpful.</p>
+
+          <div class="highlight-box" style="background: #F6EDE4; border-left-color: #2A1F1A;">
+            <p>📬 <strong>Questions?</strong> If you have any questions or concerns about this Cookies Policy, please email us at <a href="mailto:privacy@drizzledessert.house">privacy@drizzledessert.house</a> or write to us at: Drizzle Dessert House, 14 Butter Lane, Studio 3, Brooklyn, NY 11201.</p>
+          </div>
+
+          <p class="small-note">This Cookies Policy is effective as of 1 April 2025. We’re committed to transparency — just like with our recipes, you deserve to know what goes in.</p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:#FDF9F4; font-family:'DM Serif Display',serif; font-size:1.8rem;">Drizzle</div>
+          <p>An independent dessert publication. Tested recipes, deep technique, and the quiet craft of finishing well.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#">Journal</a>
+            <a href="#">Guides</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Techniques</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">About</div>
+          <div class="footer-links">
+            <a href="#">Our story</a>
+            <a href="#">Editorial policy</a>
+            <a href="#">Authors</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Stay in touch</div>
+          <div class="footer-links">
+            <a href="#">Newsletter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+          </div>
+          <p style="font-size:0.75rem; color:#BFAFA0; margin-top:1rem;">© 2025 Drizzle Dessert House. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with care — and a lot of butter.</span>
+        <span>Terms · Cookies · Disclaimer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPT (simple demo interactions) ========== -->
+  <script>
+    (function() {
+      // Mobile menu placeholder
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          alert('Mobile menu — in a full build, this would open a navigation drawer.');
+        });
+      }
+
+      // Prevent default on placeholder links
+      document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+      });
+    })();
+  </script>
+</body>
+</html>
